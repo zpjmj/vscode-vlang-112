@@ -1,26 +1,46 @@
 {
 	"name": "vscode-vlang-112",
-	"displayName": "vscode_vlang_112",
+	"displayName": "V-112",
 	"description": "vlang vscode plugin by 112",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
-	"categories": [
-		"Other"
+	"keywords": [
+		"V",
+		"v",
+		"v language",
+		"vlang",
+		"extension",
+		"定义跳转"
 	],
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"configuration": {
+			"title": "V-112",
+			"properties": {
+				"v-112.vls-112.enable": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "启动vls-112"
+				},
+				"v-112.vls-112.customPath": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "vls-112可执行程序的目录"
+				}
+			}
+		}
+	},
 	"activationEvents": [
-		"onCommand:vscode-vlang-112.helloWorld"
+		"workspaceContains:**/*.v",
+		"onLanguage:v"
 	],
 	"main": "./dist/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "vscode-vlang-112.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
 		"compile": "webpack",

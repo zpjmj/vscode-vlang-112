@@ -5,15 +5,14 @@ const path = require('path');
 
 const config = {
   target: 'node',
-  //设置模式 开发 development 还是生产 production
-  mode: 'development',
+  mode: 'none',
   entry: './src/extension.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'extension.js',
     libraryTarget: 'commonjs2'
   },
-  devtool: 'eval-source-map',
+  devtool: 'nosources-source-map',
   externals: {  //防止commonjs vscode被webpack打包
     vscode: 'commonjs vscode' // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
     // modules added here also need to be added in the .vsceignore file
