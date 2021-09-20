@@ -25,7 +25,7 @@
 					"scope": "resource",
 					"type": "boolean",
 					"default": false,
-					"description": "启动vls-112"
+					"description": "启用vls-112"
 				},
 				"v-112.vls-112.customPath": {
 					"scope": "resource",
@@ -39,7 +39,7 @@
 					"default": false,
 					"description": "以debug模式启动vls-112\n会在当前workspace文件夹下生成log文件`vls-112-debug.log`"
 				},
-				"v-112.v-112.connectionMode": {
+				"v-112.vls-112.connectionMode": {
 					"scope": "resource",
 					"type": "string",
 					"default": "stdio",
@@ -53,7 +53,7 @@
 						"Connects to the language server via TCP"
 					]
 				},
-				"v-112.v-112.tcpMode.port": {
+				"v-112.vls-112.tcpMode.port": {
 					"scope": "resource",
 					"type": "number",
 					"default": 5008,
