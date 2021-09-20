@@ -31,7 +31,33 @@
 					"scope": "resource",
 					"type": "string",
 					"default": "",
-					"description": "vls-112可执行程序的目录"
+					"description": "vls-112可执行程序的绝对路径"
+				},
+				"v-112.vls-112.debug": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "以debug模式启动vls-112\n会在当前workspace文件夹下生成log文件`vls-112-debug.log`"
+				},
+				"v-112.v-112.connectionMode": {
+					"scope": "resource",
+					"type": "string",
+					"default": "stdio",
+					"enum": [
+						"stdio",
+						"tcp"
+					],
+					"description": "plugin 与 vsl-112的数据交换方式",
+					"enumDescriptions": [
+						"Connects to the language server via standard input/output. (Default)",
+						"Connects to the language server via TCP"
+					]
+				},
+				"v-112.v-112.tcpMode.port": {
+					"scope": "resource",
+					"type": "number",
+					"default": 5008,
+					"description": "TCP模式下vsl-112连接的端口号"
 				}
 			}
 		}
@@ -67,5 +93,8 @@
 		"ts-loader": "^9.2.2",
 		"webpack": "^5.38.1",
 		"webpack-cli": "^4.7.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^7.0.0"
 	}
 }
