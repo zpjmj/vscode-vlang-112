@@ -10,7 +10,7 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
-				"--disable-extensions",
+				"--disable-extensions", //禁止其他插件启动
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
 			"outFiles": [

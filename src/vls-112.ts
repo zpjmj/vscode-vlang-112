@@ -58,6 +58,8 @@ export function connectVls112(vls112Path: string, context: ExtensionContext): vo
         shouldSpawnProcess = false;
     }
 
+    args.push('--loglv=2');
+
     if (shouldSpawnProcess) {
         console.log('Spawning VLS process...');
         vls112Process = cp.spawn(vls112Path.trim(), args);
@@ -69,7 +71,8 @@ export function connectVls112(vls112Path: string, context: ExtensionContext): vo
 
     // LSP Client options
     const clientOptions: LanguageClientOptions = {
-        documentSelector: [{ scheme: 'file', language: 'v' }],
+        //documentSelector: [{ scheme: 'file', language: 'v'}],
+        documentSelector: [{ scheme: 'file', pattern: '**/*.{v,vsh,vv}' }],
         synchronize: {
             fileEvents: workspace.createFileSystemWatcher('**/*.v')
         },
