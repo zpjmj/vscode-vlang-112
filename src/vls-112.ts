@@ -45,6 +45,8 @@ export function connectVls112(vls112Path: string, context: ExtensionContext): vo
     const isDebug = getWorkspaceConfig().get<boolean>('vls-112.debug');
     const connectionMode = getWorkspaceConfig().get<string>('vls-112.connectionMode');
     const tcpPort = getWorkspaceConfig().get<number>('vls-112.tcpMode.port');
+    const vexe = getWorkspaceConfig().get<string>('vls-112.vexe');
+    const loglv = getWorkspaceConfig().get<string>('vls-112.loglv');
 
     if (isDebug) {
         console.log('配置vls-112启动参数`--debug`');
@@ -58,7 +60,8 @@ export function connectVls112(vls112Path: string, context: ExtensionContext): vo
         shouldSpawnProcess = false;
     }
 
-    args.push('--loglv=2');
+    args.push(`--loglv=${loglv}`);
+    args.push(`--vexe=${vexe}`);
 
     if (shouldSpawnProcess) {
         console.log('Spawning VLS process...');

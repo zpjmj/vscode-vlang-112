@@ -33,6 +33,18 @@
 					"default": "",
 					"description": "vls-112可执行程序的绝对路径"
 				},
+				"v-112.vls-112.vexe": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "vls-112需要的V可执行程序的绝对路径(VEXE)"
+				},
+				"v-112.vls-112.loglv": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "用来控制vls-112-debug.log中输出信息的多少"
+				},
 				"v-112.vls-112.debug": {
 					"scope": "resource",
 					"type": "boolean",
@@ -44,13 +56,12 @@
 					"type": "string",
 					"default": "stdio",
 					"enum": [
-						"stdio",
-						"tcp"
+						"stdio"
 					],
 					"description": "plugin 与 vsl-112的数据交换方式",
 					"enumDescriptions": [
 						"Connects to the language server via standard input/output. (Default)",
-						"Connects to the language server via TCP"
+						"Connects to the language server via TCP. (Has not been implemented)"
 					]
 				},
 				"v-112.vls-112.tcpMode.port": {
