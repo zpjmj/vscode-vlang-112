@@ -5,6 +5,7 @@ const path = require('path');
 
 const config = {
   target: 'node',
+  // production none
   mode: 'none',
   entry: './src/extension.ts',
   output: {

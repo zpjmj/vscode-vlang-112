@@ -1,8 +1,10 @@
 {
 	"name": "vscode-vlang-112",
 	"displayName": "V-112",
-	"description": "vlang vscode plugin by 112",
+	"description": "vlang vscode plugin by 112,provides only the function of defining jumps",
 	"version": "0.0.1",
+	"publisher": "Mercury-tree-z112",
+	"icon": "icons/icon.png",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
