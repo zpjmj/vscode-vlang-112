@@ -8,6 +8,10 @@
 	"engines": {
 		"vscode": "^1.60.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zhangbush/vscode-vlang-112"
+	},
 	"keywords": [
 		"V",
 		"v",
