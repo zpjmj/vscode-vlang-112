@@ -37,7 +37,12 @@ export async function activateVls112(context: ExtensionContext): Promise<void> {
 }
 //禁用vsl112
 export async function deactivateVls112(): Promise<void> {
-    console.log('deactivateVls112');
+	if (client && isVls112Enabled()) {
+		await client.stop();
+		if (shouldSpawnProcess && !vls112Process.killed) {
+			vls112Process.kill();
+		}
+	}
 }
 
 export function connectVls112(vls112Path: string, context: ExtensionContext): void {

@@ -77,7 +77,14 @@
 					"description": "TCP模式下vsl-112连接的端口号"
 				}
 			}
-		}
+		},
+		"commands": [
+			{
+				"command": "v-112.vls-112.restart",
+				"title": "Restart VLS",
+				"category": "V-112"
+			}
+		]
 	},
 	"activationEvents": [
 		"workspaceContains:**/*.v",
